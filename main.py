@@ -10,7 +10,6 @@ noneOldScore = False
 content = ""  # 用于存储成绩信息
 
 if newTotalResult == 0:  # 如果没有成绩
-    pushChange.push(1, "老师还没有上传成绩，请耐心等待", "没有成绩")
     exit()
 else:
     for item in date['items']:
@@ -58,4 +57,5 @@ if scoreChange:
     writefile.writeFile('grades_json_old.json', jsonContent)
     pushChange.push(1, content, "有"+ str(changeNumber) +"门新成绩了！")
 print("是否更新",scoreChange,"更新门数",changeNumber)
+
 
